@@ -11,12 +11,23 @@
     <!--[if lte IE 7]>
     <script src="js/IE8.js" type="text/javascript"></script><![endif]-->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 
 </head>
 
 <body id="index" class="home">
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
+    
+    <div x-data="{ open: false }">
+        <button @click="open = true">Expand</button>
+
+        <span x-show="open">
+            Content...
+        </span>
+    </div>
+
 </body>
 </html>
